@@ -11,3 +11,11 @@ function connectToDB() {
 
     return $database;
 }
+
+function isUser() {
+    if ( isset( $_SESSION['user']['role'] ) && $_SESSION['user']['role'] === 'user' ) {
+        return true;
+    } else {
+        return false;
+    }
+}
