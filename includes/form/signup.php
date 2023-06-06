@@ -42,7 +42,6 @@
                 'email' => $email,
                 'password' => password_hash( $password, PASSWORD_DEFAULT )
             ]);
-            $_SESSION["user"] = $user;
             header('Location: /');
             exit;
         }

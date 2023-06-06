@@ -4,8 +4,8 @@
     $database = connectToDB();
 
     // Get all the questions from the database
-    $sql = "SELECT * FROM questions";
-    $query = $database->prepare( $sql );
+    $sql = 'SELECT * FROM questions';
+    $query = $database->prepare($sql);
     $query->execute();
     $questions = $query->fetchAll();
 
@@ -24,8 +24,9 @@
                     class="form-control" 
                     id="name" 
                     name="name" 
-                    placeholder="Enter your name"
-                    value= "<?= $_SESSION['user']['name']; ?>" disabled >
+                    value="<?= $_SESSION['user']['name'] ?>"
+                    disabled
+                    >
             </div>
             <div class="col">
                 <label for="email" class="form-label fw-bold">Email</label>
@@ -34,8 +35,8 @@
                     class="form-control" 
                     id="email" 
                     name="email" 
-                    placeholder="Enter your email"
-                    value= "<?= $_SESSION['user']['email']; ?>" disabled 
+                    value="<?= $_SESSION['user']['email'] ?>"
+                    disabled
                     >
             </div>
         </div>
